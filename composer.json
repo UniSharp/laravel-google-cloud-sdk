@@ -3,7 +3,7 @@
     "description": "The Google Cloud SDK",
     "require": {
         "php": ">=5.6.4",
-        "illuminate/support": "~5.3.*",
+        "illuminate/support": ">=5.3.0",
         "google/cloud": "^0.20"
     },
     "autoload": {

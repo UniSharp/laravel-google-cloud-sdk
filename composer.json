@@ -4,7 +4,13 @@
     "require": {
         "php": ">=5.6.4",
         "illuminate/support": ">=5.3.0",
-        "google/cloud": "^0.20"
+        "unisharp/googleapi-php": "dev-master",
+        "google/cloud": "^0.20",
+        "google/gax": "^0.6.0",
+        "google/proto-client-php": "^0.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": {

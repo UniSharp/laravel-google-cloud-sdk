@@ -7,8 +7,9 @@ trait ResourceNameTrait
      * @var array
      */
     private $templates = [
-        'project' => 'projects/%1$s',
+        'project'  => 'projects/%1$s',
         'instance' => 'projects/%2$s/instances/%1$s',
+        'table'    => 'projects/%3$s/instances/%2$s/tables/%1$s',
     ];
 
     /**
@@ -62,8 +63,9 @@ trait ResourceNameTrait
      * @return string
      * @throws \InvalidArgumentException
      */
-    public function formatName($type, $name, $projectId = null)
+    public function formatName($type, $name, ...$parent)
     {
+        array_unshift($parent, $name);
         if (!isset($this->templates[$type])) {
             throw new \InvalidArgumentException(sprintf(
                 'Template `%s` is not defined',
@@ -71,7 +73,7 @@ trait ResourceNameTrait
             ));
         }
 
-        return vsprintf($this->templates[$type], [$name, $projectId]);
+        return vsprintf($this->templates[$type], $parent);
     }
 
     /**

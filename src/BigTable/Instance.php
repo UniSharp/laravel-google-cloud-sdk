@@ -3,9 +3,11 @@ namespace Unisharp\GoogleCloud\BigTable;
 
 use Google\Cloud\Exception\NotFoundException;
 use Unisharp\GoogleCloud\BigTable\Connection\ConnectionInterface;
+use Unisharp\GoogleCloud\BigTable\Traits\ResourceNameTrait;
 
 class Instance extends BaseObject
 {
+    use ResourceNameTrait;
     protected $name;
     protected $display_name;
 
@@ -27,12 +29,12 @@ class Instance extends BaseObject
         $options['pageToken'] = null;
 
         do {
-            $response = $this->connection->listSubscriptionsByTopic($options + [
-                    'topic' => $this->name
+            $response = $this->connection->listTables($options + [
+                    'instance' => $this->formatName('instance', $this->name, $this->projectId)
                 ]);
 
-            foreach ($response['subscriptions'] as $subscription) {
-                yield $this->subscriptionFactory($subscription);
+            foreach ($response['tables'] as $table) {
+                yield $this->tableFactory($table['name'], $table);
             }
 
             // If there's a page token, we'll request the next page.
@@ -40,6 +42,11 @@ class Instance extends BaseObject
                 ? $response['nextPageToken']
                 : null;
         } while ($options['pageToken']);
+    }
+
+    public function table($name)
+    {
+        return $this->tableFactory($name);
     }
 
     public function name()
@@ -102,6 +109,11 @@ class Instance extends BaseObject
                 ? $response['nextPageToken']
                 : null;
         } while ($options['pageToken']);
+    }
+
+    public function tableFactory($name, array $info = null)
+    {
+        return new Table($this->connection, $this->projectId, $name, $this->name, $this->encode, $info);
     }
 }
 

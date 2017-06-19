@@ -601,12 +601,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "8a1b03e4be6f183836684ee73d4d4c817ac7ce6f"
+                "reference": "8a453435a2a11baf6743bdb4173970912c212486"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/8a1b03e4be6f183836684ee73d4d4c817ac7ce6f",
-                "reference": "8a1b03e4be6f183836684ee73d4d4c817ac7ce6f",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/8a453435a2a11baf6743bdb4173970912c212486",
+                "reference": "8a453435a2a11baf6743bdb4173970912c212486",
                 "shasum": ""
             },
             "require": {
@@ -649,7 +649,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-06-08 13:02:12"
+            "time": "2017-06-13 19:00:13"
         },
         {
             "name": "monolog/monolog",
@@ -1063,7 +1063,7 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.1",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
@@ -1101,7 +1101,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-04-12T18:52:22+00:00"
+            "time": "2017-04-12 18:52:22"
         },
         {
             "name": "phar-io/manifest",
@@ -1670,12 +1670,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9d02b4dffc8a4f5baeb5540103569cc4e2631a29"
+                "reference": "aced19c732ce653cd5802e7fda6deafd27c2c800"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9d02b4dffc8a4f5baeb5540103569cc4e2631a29",
-                "reference": "9d02b4dffc8a4f5baeb5540103569cc4e2631a29",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/aced19c732ce653cd5802e7fda6deafd27c2c800",
+                "reference": "aced19c732ce653cd5802e7fda6deafd27c2c800",
                 "shasum": ""
             },
             "require": {
@@ -1746,7 +1746,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-11 12:16:43"
+            "time": "2017-06-13 14:08:18"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1974,12 +1974,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "0d1b04bee1356d8bb46bd6f3afcba94b0ceff073"
+                "reference": "b89a97be3b97a4a2849ce778743edb9add641262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/0d1b04bee1356d8bb46bd6f3afcba94b0ceff073",
-                "reference": "0d1b04bee1356d8bb46bd6f3afcba94b0ceff073",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/b89a97be3b97a4a2849ce778743edb9add641262",
+                "reference": "b89a97be3b97a4a2849ce778743edb9add641262",
                 "shasum": ""
             },
             "require": {
@@ -1991,7 +1991,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -2016,7 +2016,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-06-09 05:17:49"
+            "time": "2017-06-13 13:48:49"
         },
         {
             "name": "sebastian/exporter",
